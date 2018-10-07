@@ -1,0 +1,111 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+
+
+uses
+  System.SysUtils;
+
+
+
+type ar = array[1..12, 1..4] of integer;
+type ar0 = array[1..4] of integer;
+var
+ a: ar;
+ a0, a1, a2, a3: ar0;
+ f: TextFile;
+ i, j, k, l, m, n, o, p,r,z: integer;
+ sum: integer;
+
+ procedure Sel_arrays();
+begin
+   writeln('   Два соседних подмассива по 4 значения');
+   for i := 3 to 10 do
+    begin
+    o := 1;
+    //p := 1;
+      for m := 1 to 4 do
+        begin
+           a0[m] := a[i][m];
+           write(a0[m]:4);
+           int(o);
+            while not (a0[4] + a1[2] + a2[3] + a3[1] = 10) do
+   begin
+    i := i + 1;
+    writeln('Неравно');
+   end;
+        end;
+     {   for p := 1 to 2 do
+        begin
+          a2[p] := a[i+1][p];
+          write(a2[p]:4);
+        end; }
+    writeln;
+     { for n := 3 to 4 do
+        begin
+          a1[n] := a[i][n];
+          write(a1[n]:4);
+        end;
+   //writeln;
+ end;
+      {for r := 3 to 4 do
+        begin
+          a3[r] := a[i+1][r];
+          write(a3[r]:4);
+        end;
+        if i = 6 then
+
+   writeln;}
+   //writeln;
+  end;
+
+
+   writeln('Равно');
+
+   //writeln(a1[m,n]:4);
+end;
+ begin
+   AssignFile(f, '1.txt');
+   Reset(f);
+
+   writeln('    Заданный массив     '); // Выводим входной массив
+   k := 1;
+   l := 1;
+   for I := 1 to 12 do
+     begin
+     z := 1;
+     z := z * i;
+       for j := 1 to 4 do
+         begin
+            Read(f, a[i,j]);
+            write(a[i,j]:4);
+            int(l);
+        end;
+      Readln(f);
+      int(k);
+      writeln;
+
+      int(z);
+     end;
+
+
+
+
+
+//     else
+//     begin
+//     sum := a[1][4] + a[3][3] + a[4][2] + a[5][1];
+//     writeln(sum);
+//
+//     end;
+
+     writeln(z);
+     sel_arrays;
+   CloseFile(f);
+
+
+
+
+
+end.
